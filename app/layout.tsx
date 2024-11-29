@@ -15,6 +15,7 @@ import dynamic from "next/dynamic";
 import Script from "next/script";
 import NextTopLoader from "nextjs-toploader";
 import CookieConsent from "@/components/shared/cookie";
+import AdSense from "./adsense";
 
 const Loader = dynamic(() => import("@/components/shared/loader"), {
   ssr: false,
@@ -54,6 +55,7 @@ export default async function RootLayout({
           #content { display: none; }
           #loader { display: flex; }
         `}</style>
+          <AdSense pId="8331809888604693" />
         </head>
         <body
           className={cn(`scroll-smooth overflow-x-hidden `, poppins.className)}
