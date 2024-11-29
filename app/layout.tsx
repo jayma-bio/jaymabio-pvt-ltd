@@ -50,7 +50,6 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en" suppressHydrationWarning>
         <head>
-
           <style>{`
           #content { display: none; }
           #loader { display: flex; }
@@ -70,13 +69,7 @@ export default async function RootLayout({
             <ModalProvider />
             <ConfettiProvider />
             <NextTopLoader color="#0D2A25" />
-            <ThemeProvider
-              defaultTheme="light"
-              attribute="class"
-              enableSystem={false}
-            >
-              {children}
-            </ThemeProvider>
+            {children}
             <Toaster />
             <Analytics />
             <SpeedInsights />
