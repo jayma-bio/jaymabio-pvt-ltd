@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Cog, LayoutDashboard, LogOut, User } from "lucide-react";
+import { Cog, LayoutDashboard, LogOut, ShoppingCart, User } from "lucide-react";
 import { GiShoppingBag } from "react-icons/gi";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -93,10 +93,18 @@ export function UserNav({ user }: UserNavProps) {
 
           <DropdownMenuItem className="hover:cursor-pointer" asChild>
             <Link href="/orders" className="flex items-center">
+              <ShoppingCart className="w-4 h-4 mr-3 text-muted-foreground" />
+              Manage Cart
+            </Link>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem className="hover:cursor-pointer" asChild>
+            <Link href="/orders" className="flex items-center">
               <GiShoppingBag className="w-4 h-4 mr-3 text-muted-foreground" />
               Track Orders
             </Link>
           </DropdownMenuItem>
+
           <DropdownMenuSeparator />
           <DropdownMenuItem className="hover:cursor-pointer" asChild>
             <Link href="/profile" className="flex items-center">
