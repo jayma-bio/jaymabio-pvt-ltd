@@ -15,6 +15,7 @@ export const publicRoutes = [
   "/events",
   "/career",
   "/products/.*/",
+  "/categories",
   "/terms-conditions",
   "/cancellation-refund",
   "/privacy-policy",
