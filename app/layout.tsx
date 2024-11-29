@@ -51,11 +51,11 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en" suppressHydrationWarning>
         <head>
+          <AdSense pId="8331809888604693" />
           <style>{`
           #content { display: none; }
           #loader { display: flex; }
         `}</style>
-          <AdSense pId="8331809888604693" />
         </head>
         <body
           className={cn(`scroll-smooth overflow-x-hidden `, poppins.className)}
