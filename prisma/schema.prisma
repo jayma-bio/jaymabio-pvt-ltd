@@ -123,7 +123,7 @@ model Blog {
   content   String
   likes     Int      @default(0)
   toggle    Boolean  @default(false)
-  archived  Boolean  @default(true)
+  archived  Boolean  @default(false)
   name      String
   userName  String
   userImage String

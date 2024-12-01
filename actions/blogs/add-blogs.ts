@@ -17,10 +17,15 @@ type BlogFormValues = {
 
 export default async function addBlogs(data: BlogFormValues) {
   try {
+    const createValue = {
+      ...data,
+      archived: data.role === "ADMIN" ? false : true,
+    };
+    
     await prismadb.blog.create({
-      data: data,
+      data: createValue,
     });
-
+    
     return { success: true };
   } catch (error) {
     console.error(error);
